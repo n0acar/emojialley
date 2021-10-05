@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 
 import EmojiBlock from "./components/EmojiBlock";
-import CopyTab from "./components/CopyTab";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
+import CopyTab from "./components/CopyTab";
 
 import emojisJson from "./db/emojis.json";
 
@@ -23,16 +23,26 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar></Navbar>
-      {copyTabText && <CopyTab copyText={copyTabText}></CopyTab>}
+      <Header></Header>
       {/* <SearchBar search={searchEmoji}></SearchBar> */}
-      {Object.keys(emojisJson).map((emojiHeader) => (
-        <EmojiBlock
-          header={emojiHeader}
-          emojis={emojisJson[emojiHeader]}
-          onCopy={copyEmoji}
-        ></EmojiBlock>
-      ))}
+      {/* copyTabText && (
+        <CopyTab copyText={copyTabText} onWrite={setCopyTabText}></CopyTab>
+      )*/}
+      <div
+        style={{
+          position: "absolute",
+          top: "10%",
+          width: "100%",
+        }}
+      >
+        {Object.keys(emojisJson).map((emojiHeader) => (
+          <EmojiBlock
+            header={emojiHeader}
+            emojis={emojisJson[emojiHeader]}
+            onCopy={copyEmoji}
+          ></EmojiBlock>
+        ))}
+      </div>
     </div>
   );
 }

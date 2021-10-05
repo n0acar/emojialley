@@ -1,18 +1,21 @@
-const CopyTab = ({ copyText }) => {
+const CopyTab = ({ copyText, onWrite }) => {
   return (
-    <text
-      style={{
-        position: "fixed",
-        top: "0",
-        right: "0",
-        zIndex: "999",
-        width: "25%",
-        height: "23px",
-        fontSize: "30px",
-      }}
-    >
-      {copyText}
-    </text>
+    <>
+      <input
+        value={copyText}
+        type="text"
+        onChange={(e) => {
+          onWrite(e.target.value);
+        }}
+      ></input>
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText(copyText);
+        }}
+      >
+        COPY
+      </button>
+    </>
   );
 };
 
