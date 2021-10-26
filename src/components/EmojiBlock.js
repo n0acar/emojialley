@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import SingleEmoji from "./SingleEmoji";
 import { Container, Row, Col } from "react-bootstrap";
 
-const EmojiBlock = ({ header, emojis, onCopy }) => {
+const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
   const [emojiList, setEmojiList] = useState([]);
 
   useEffect(() => {
@@ -26,19 +26,19 @@ const EmojiBlock = ({ header, emojis, onCopy }) => {
 
   const buildEmojiBlock = () => (
     <Container>
-      <h1
+      <div
+        class="sticky top-16 bg-white"
         style={{
-          fontFamily: "Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji",
+          fontFamily: "Gill Sans, sans-serif",
           fontSize: "32px",
-          fontFamily: "Arial",
         }}
       >
         {header}
-      </h1>
+      </div>
       <Row
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat( auto-fill, minmax(80px, 1fr))",
+          gridTemplateColumns: "repeat( auto-fill, minmax(70px, 1fr))",
         }}
       >
         {emojiList.map((singleEmoji) => (
@@ -50,7 +50,7 @@ const EmojiBlock = ({ header, emojis, onCopy }) => {
     </Container>
   );
 
-  return <div>{buildEmojiBlock()}</div>;
+  return <div ref={inRef}>{buildEmojiBlock()}</div>;
 };
 
 export default EmojiBlock;

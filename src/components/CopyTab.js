@@ -1,6 +1,6 @@
 const CopyTab = ({ copyText, onWrite }) => {
   return (
-    <>
+    <div class="flex flex-row relative">
       <input
         value={copyText}
         type="text"
@@ -15,7 +15,7 @@ const CopyTab = ({ copyText, onWrite }) => {
       >
         COPY
       </button>
-    </>
+    </div>
   );
 };
 
