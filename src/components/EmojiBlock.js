@@ -9,15 +9,9 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
   useEffect(() => {
     var dummyEmojiList = [];
     const createEmojiList = () => {
-      Object.keys(emojis).forEach((emojiSubgroup) =>
-        Object.keys(emojis[emojiSubgroup]).forEach((emojiName) => {
-          const emoji = {
-            name: emojiName,
-            symbol: emojis[emojiSubgroup][emojiName],
-          };
-          dummyEmojiList.push(emoji);
-        })
-      );
+      emojis.forEach((emoji) => {
+        dummyEmojiList.push(emoji);
+      });
     };
 
     createEmojiList();
@@ -26,15 +20,17 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
 
   const buildEmojiBlock = () => (
     <Container>
-      <div
-        class="sticky top-16 bg-white"
-        style={{
-          fontFamily: "Gill Sans, sans-serif",
-          fontSize: "32px",
-        }}
-      >
-        {header}
-      </div>
+      {header && (
+        <div
+          class="sticky bg-white"
+          style={{
+            fontFamily: "Gill Sans, sans-serif",
+            fontSize: "32px",
+          }}
+        >
+          {header}
+        </div>
+      )}
       <Row
         style={{
           display: "grid",

@@ -1,12 +1,15 @@
+import { FaSearch } from "react-icons/fa";
+
 const SearchBar = ({ search }) => {
   return (
-    <div>
+    <div class="flex flex-row w-full pl-10 pr-10 align-middle items-center">
+      <FaSearch class="mr-2"></FaSearch>
       <input
+        class="rounded w-full pl-1"
         type="search"
-        placeholder="Search Emojis"
+        placeholder="Search Emojis 😍"
         onChange={(e) => search(e.target.value)}
       />
-      <span>Search</span>
     </div>
   );
 };
