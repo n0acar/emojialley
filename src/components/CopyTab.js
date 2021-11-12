@@ -2,7 +2,7 @@ import { FaRegCopy } from "react-icons/fa";
 
 const CopyTab = ({ copyText, onWrite, onCopyClick }) => {
   return (
-    <div class="flex flex-row w-full pl-10 pr-10 align-middle items-center">
+    <div class="flex flex-row w-full pl-1 pr-1 lg:pl-10 lg:pr-10 align-middle items-center">
       <input
         class="rounded w-full pl-1"
         placeholder="Click on an Emoji 😃"

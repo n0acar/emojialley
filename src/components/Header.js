@@ -21,22 +21,18 @@ const Header = ({
         }}
       >
         <img
+          class="ml-6 lg:ml-20"
           style={{
-            marginLeft: "6%",
             maxWidth: "100%",
             maxHeight: "100%",
             objectFit: "contain",
           }}
           src="logo.png"
         />
-        <div
-          style={{
-            marginRight: "6%",
-          }}
-        >
+        <div class="ml-6 lg:mr-20 lg:text-2xl text-l hidden sm:flex">
           {blockHeaders.map((header, i) => (
             <button
-              class="hover:bg-gray-50 hover:bg-opacity-20 py-3 px-3 rounded hover:shadow text-2xl"
+              class="p-3 hover:bg-gray-50 hover:bg-opacity-20 rounded hover:shadow"
               onClick={() => scrollToBlock(i)}
             >
               {emoji_header_symbol_pairs[header]}
@@ -45,7 +41,11 @@ const Header = ({
         </div>
       </div>
       <div
-        class="flex flex-row justify-between h-12 items-center align-middle bg-gray-100 bg-opacity-80 shadow-sm pl-12 pr-12 text-xl"
+        class="flex flex-row justify-between h-12 items-center align-middle bg-gray-100 bg-opacity-80 shadow-sm 
+        pl-3 pr-3
+        lg:pl-12 lg:pr-12
+        text-sm 
+        md:text-xl"
         style={{
           fontFamily: "Gill Sans, sans-serif",
         }}
