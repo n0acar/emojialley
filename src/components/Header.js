@@ -29,7 +29,7 @@ const Header = ({
           }}
           src="logo.png"
         />
-        <div class="ml-6 lg:mr-20 lg:text-2xl text-l hidden sm:flex">
+        <div class="mr-6 lg:mr-20 lg:text-2xl text-xl hidden md:flex">
           {blockHeaders.map((header, i) => (
             <button
               class="p-3 hover:bg-gray-50 hover:bg-opacity-20 rounded hover:shadow"
