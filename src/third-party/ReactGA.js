@@ -6,7 +6,7 @@ const reactGA = () => {
   const location = useLocation();
   const [initialized, setInitialized] = useState(false);
 
-  let TRACKING_ID = process.env.GA_TRACKING_ID;
+  let TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
   useEffect(() => {
     if (!window.location.href.includes("localhost")) {
