@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+//import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 
 const ReactGATracker = () => {
-  const location = useLocation();
+  //const location = useLocation();
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
@@ -19,9 +19,9 @@ const ReactGATracker = () => {
 
   useEffect(() => {
     if (initialized) {
-      ReactGA.pageview(location.pathname + location.search);
+      ReactGA.pageview(window.location.pathname + window.location.search); //location.pathname + location.search
     }
-  }, [initialized, location]);
+  }, [initialized]); //location
 };
 
 export default ReactGATracker;
