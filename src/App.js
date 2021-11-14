@@ -10,13 +10,15 @@ import SearchBar from "./components/SearchBar";
 import CopyTab from "./components/CopyTab";
 import Footer from "./components/Footer";
 
+import reactGA from "./third-party/ReactGA";
+
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import emojisJson from "./db/emojis.json";
 
 function App() {
-  const refBlock = useRef(null);
+  reactGA();
 
   const [copyTabText, setCopyTabText] = useState("");
   const [searchText, setSearchText] = useState("");
