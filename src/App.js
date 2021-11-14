@@ -10,7 +10,7 @@ import SearchBar from "./components/SearchBar";
 import CopyTab from "./components/CopyTab";
 import Footer from "./components/Footer";
 
-import reactGA from "./third-party/ReactGA";
+import ReactGATracker from "./third-party/ReactGATracker";
 
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,7 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import emojisJson from "./db/emojis.json";
 
 function App() {
-  reactGA();
+  ReactGATracker();
 
   const [copyTabText, setCopyTabText] = useState("");
   const [searchText, setSearchText] = useState("");
