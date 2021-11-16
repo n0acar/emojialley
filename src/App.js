@@ -31,7 +31,6 @@ function App() {
       0,
       Object.keys(currentEmojiDict).length
     );
-    console.log(itemsRef);
   }, [Object.keys(currentEmojiDict)]);
 
   useEffect(() => {

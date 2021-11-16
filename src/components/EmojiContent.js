@@ -9,11 +9,8 @@ const EmojiContent = (emojisJson, itemsRef, copyEmoji) => {
       0,
       Object.keys(emojisJson).length
     );
-    console.log(itemsRef);
   }, []);
-  {
-    console.log(emojisJson);
-  }
+
   return (
     <div class="sticky top-0 w-full relative flex flex-col">
       {Object.keys(emojisJson).map((emojiHeader, i) => (

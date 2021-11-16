@@ -7,10 +7,8 @@ const ReactGATracker = () => {
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    console.log("GA Tracker");
     let TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
-    console.log(TRACKING_ID);
     if (TRACKING_ID !== undefined) {
       ReactGA.initialize(TRACKING_ID);
       setInitialized(true);
