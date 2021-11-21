@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 //import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
+import ClientIdBuilder from "../utils/ClientIdBuilder";
 
 const ReactGATracker = () => {
   //const location = useLocation();
@@ -10,7 +11,14 @@ const ReactGATracker = () => {
     let TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
     if (TRACKING_ID !== undefined) {
-      ReactGA.initialize(TRACKING_ID);
+      ReactGA.initialize(TRACKING_ID, {
+        gaOptions: {
+          storage: "none",
+          storeGac: false,
+          clientId: ClientIdBuilder(),
+        },
+      });
+      ReactGA.set({ anonymizeIp: true });
       setInitialized(true);
     }
   }, []);

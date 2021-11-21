@@ -92,7 +92,7 @@ function App() {
   };
 
   return (
-    <div class="flex flex-col relative">
+    <div class="flex flex-col">
       <ToastContainer
         autoClose={2000}
         closeButton={false}
@@ -109,7 +109,7 @@ function App() {
       ></Header>
       {/* <SearchBar search={searchEmoji}></SearchBar> */}
       {/*<CopyTab copyText={copyTabText} onWrite={setCopyTabText}></CopyTab>*/}
-      <div class="sticky top-0 w-full relative flex flex-col">
+      <div class="w-full relative flex flex-col">
         {Object.keys(currentEmojiDict).map((emojiHeader, i) => (
           <EmojiBlock
             key={i}
@@ -120,7 +120,7 @@ function App() {
           ></EmojiBlock>
         ))}
       </div>
-      {/*<Footer></Footer>*/}
+      <Footer />
     </div>
   );
 }
