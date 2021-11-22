@@ -92,7 +92,7 @@ function App() {
   };
 
   return (
-    <div class="flex flex-col h-screen">
+    <div class="flex flex-col min-h-screen h-full">
       <ToastContainer
         autoClose={2000}
         closeButton={false}
