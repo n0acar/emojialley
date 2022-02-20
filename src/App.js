@@ -77,6 +77,8 @@ function App() {
   const notify = (emojiSymbol) => toast(`${emojiSymbol} is copied!`);
 
   const copyEmoji = (emojiSymbol) => {
+    navigator.clipboard.writeText(emojiSymbol);
+    notify(emojiSymbol);
     setCopyTabText(copyTabText + emojiSymbol);
   };
 
@@ -85,9 +87,7 @@ function App() {
   };
 
   const scrollToBlock = (i) => {
-    if (typeof window !== `undefined`) {
-      window.scrollTo(0, itemsRef.current[i].offsetTop);
-    }
+    window.scrollTo(0, itemsRef.current[i].offsetTop);
   };
 
   return (
