@@ -1,13 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import EmojiBlock from "./components/EmojiBlock";
-import EmojiContent from "./components/EmojiContent";
 
 import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import CopyTab from "./components/CopyTab";
 import Footer from "./components/Footer";
 
 import ReactGATracker from "./third-party/ReactGATracker";
@@ -88,7 +85,9 @@ function App() {
   };
 
   const scrollToBlock = (i) => {
-    window.scrollTo(0, itemsRef.current[i].offsetTop);
+    if (typeof window !== `undefined`) {
+      window.scrollTo(0, itemsRef.current[i].offsetTop);
+    }
   };
 
   return (

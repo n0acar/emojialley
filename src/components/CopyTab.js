@@ -1,3 +1,5 @@
+import React from "react";
+
 import { FaRegCopy } from "react-icons/fa";
 
 const CopyTab = ({ copyText, onWrite, onCopyClick }) => {
