@@ -12,7 +12,7 @@ import ReactGATracker from "./third-party/ReactGATracker";
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import emojisJson from "./db/emojis.json";
+import emojisJson from "../content/emojis.json";
 
 function App() {
   ReactGATracker();
@@ -106,8 +106,6 @@ function App() {
         onWrite={setCopyTabText}
         onCopyClick={notify}
       ></Header>
-      {/* <SearchBar search={searchEmoji}></SearchBar> */}
-      {/*<CopyTab copyText={copyTabText} onWrite={setCopyTabText}></CopyTab>*/}
       <div class="w-full relative flex flex-col mb-auto">
         {Object.keys(currentEmojiDict).map((emojiHeader, i) => (
           <EmojiBlock

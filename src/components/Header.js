@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import CopyTab from "./CopyTab";
 
-import emoji_header_symbol_pairs from "../db/emoji_header_symbol_pairs.json";
+import emoji_header_symbol_pairs from "../../content/emoji_header_symbol_pairs.json";
 
 const Header = ({
   scrollToBlock,

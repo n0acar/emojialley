@@ -4,7 +4,7 @@ import SingleEmoji from "./SingleEmoji";
 import { Container, Row, Col } from "react-bootstrap";
 
 const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
-  const [emojiList, setEmojiList] = useState([]);
+  const [emojiList, setEmojiList] = useState(emojis);
 
   useEffect(() => {
     var dummyEmojiList = [];
