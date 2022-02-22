@@ -18,7 +18,7 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
   }, [emojis]);
 
   const buildEmojiBlock = () => (
-    <div class="mx-2 md:mx-16 my-2">
+    <div class="md:mx-16 my-2">
       {header && (
         <div
           class="sticky bg-white"
