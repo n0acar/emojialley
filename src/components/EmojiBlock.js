@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import SingleEmoji from "./SingleEmoji";
-import { Container, Row, Col } from "react-bootstrap";
 
 const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
   const [emojiList, setEmojiList] = useState(emojis);
@@ -19,7 +18,7 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
   }, [emojis]);
 
   const buildEmojiBlock = () => (
-    <Container>
+    <div class="mx-2 md:mx-16 my-2">
       {header && (
         <div
           class="sticky bg-white"
@@ -31,19 +30,17 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
           {header}
         </div>
       )}
-      <Row
+      <div
         style={{
           display: "grid",
           gridTemplateColumns: "repeat( auto-fill, minmax(70px, 1fr))",
         }}
       >
         {emojiList.map((singleEmoji) => (
-          <Col>
-            <SingleEmoji emoji={singleEmoji} onCopy={onCopy}></SingleEmoji>
-          </Col>
+          <SingleEmoji emoji={singleEmoji} onCopy={onCopy}></SingleEmoji>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 
   return <div ref={inRef}>{buildEmojiBlock()}</div>;
