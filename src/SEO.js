@@ -21,7 +21,6 @@ const SEO = () => {
   const title = site.siteMetadata.title;
   const keywords = site.siteMetadata.keywords;
   const metaDescription = site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata.title;
 
   console.log(title);
   console.log(metaDescription);
@@ -30,7 +29,6 @@ const SEO = () => {
   return (
     <Helmet
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
