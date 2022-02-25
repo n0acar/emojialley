@@ -28,6 +28,7 @@ const Header = ({
             objectFit: "contain",
           }}
           src="logo.png"
+          alt="emoji alley logo"
         />
         <div class="mr-6 lg:mr-20 lg:text-2xl text-xl hidden md:flex">
           {blockHeaders.map((header, i) => (
