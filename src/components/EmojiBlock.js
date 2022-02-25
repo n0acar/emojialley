@@ -20,7 +20,7 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
   const buildEmojiBlock = () => (
     <div class="md:mx-16 my-2">
       {header && (
-        <h1
+        <h2
           class="sticky bg-white"
           style={{
             fontFamily: "Gill Sans, sans-serif",
@@ -28,7 +28,7 @@ const EmojiBlock = ({ inRef, header, emojis, onCopy }) => {
           }}
         >
           {header}
-        </h1>
+        </h2>
       )}
       <div
         style={{

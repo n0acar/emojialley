@@ -13,13 +13,13 @@ const Header = ({
   onCopyClick,
 }) => {
   return (
-    <div class="flex flex-col sticky top-0 z-50 w-full">
-      <div
-        class="flex flex-row justify-between h-16 items-center align-middle"
-        style={{
-          backgroundColor: "#5CE1E6",
-        }}
-      >
+    <div
+      class="flex flex-col sticky top-0 z-50 w-full"
+      style={{
+        backgroundColor: "#5CE1E6",
+      }}
+    >
+      <div class="flex flex-row justify-between h-16 items-center align-middle">
         <img
           class="ml-6 lg:ml-20"
           style={{
@@ -41,6 +41,7 @@ const Header = ({
           ))}
         </div>
       </div>
+
       <div
         class="flex flex-row justify-between h-12 items-center align-middle bg-gray-100 bg-opacity-80 shadow-sm 
         pl-3 pr-3

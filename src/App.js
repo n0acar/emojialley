@@ -104,6 +104,7 @@ function App() {
         onWrite={setCopyTabText}
         onCopyClick={notify}
       ></Header>
+
       <div class="w-full relative flex flex-col mb-auto">
         {Object.keys(currentEmojiDict).map((emojiHeader, i) => (
           <EmojiBlock
