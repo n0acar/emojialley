@@ -12,6 +12,7 @@ const SEO = () => {
             description
             author
             keywords
+            image
           }
         }
       }
@@ -48,7 +49,7 @@ const SEO = () => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -61,6 +62,10 @@ const SEO = () => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `og:image`,
+          content: site.siteMetadata?.image,
         },
       ]}
     />
