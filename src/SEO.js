@@ -26,6 +26,7 @@ const SEO = () => {
   return (
     <Helmet
       title={title}
+      link={[{rel: "icon", type:"image/x-icon", href="/favicon.ico"}]}
       meta={[
         {
           name: `description`,
@@ -70,10 +71,6 @@ const SEO = () => {
         {
           name: `twitter:image`,
           content: site.siteMetadata?.image,
-        },
-        {
-          name: `icon`,
-          href: `/favicon.ico`,
         },
       ]}
     />
