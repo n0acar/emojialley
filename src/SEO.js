@@ -67,6 +67,14 @@ const SEO = () => {
           name: `og:image`,
           content: site.siteMetadata?.image,
         },
+        {
+          name: `twitter:image`,
+          content: site.siteMetadata?.image,
+        },
+        {
+          name: `icon`,
+          href: `/favicon.ico`,
+        },
       ]}
     />
   );
